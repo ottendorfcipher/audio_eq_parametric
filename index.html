@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parametric EQ Plugin</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parametric EQ Plugin</h1>
+        <input type="file" id="audio-file" accept="audio/*">
+        <button id="play-button">Play</button>
+        <div id="eq-container">
+            <!-- EQ bands will be dynamically generated here -->
+        </div>
+        <button id="add-band-button">Add Band</button>
+        <div id="filter-container">
+            <div class="filter">
+                <label>High Pass Filter:</label>
+                <input type="range" id="hpf-slider" min="20" max="1000" value="20" step="1">
+                <input type="number" id="hpf-input" min="20" max="1000" value="20" step="1">
+            </div>
+            <div class="filter">
+                <label>Low Cut Filter:</label>
+                <input type="range" id="lpf-slider" min="1000" max="20000" value="20000" step="1">
+                <input type="number" id="lpf-input" min="1000" max="20000" value="20000" step="1">
+            </div>
+        </div>
+        <canvas id="spectrum-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

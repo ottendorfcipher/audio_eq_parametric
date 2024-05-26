@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#eq-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.eq-band {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eq-band label {
+  margin-right: 10px;
+  color: #333;
+}
+
+.eq-band input[type="range"] {
+  flex: 1;
+}
+
+.eq-band input[type="number"] {
+  width: 80px;
+  margin-left: 10px;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.delete-band {
+  margin-left: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.filter label {
+  margin-right: 10px;
+  color: #333;
+}
+
+.filter input[type="range"] {
+  flex: 1;
+}
+
+.filter input[type="number"] {
+  width: 80px;
+  margin-left: 10px;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#spectrum-canvas {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
