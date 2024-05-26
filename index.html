@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Parametric EQ Plugin</title>
+    <title>Parametric EQ</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Parametric EQ Plugin</h1>
+        <h1>Parametric EQ</h1>
         <input type="file" id="audio-file" accept="audio/*">
-        <button id="play-button">Play</button>
+        <div class="audio-controls">
+            <button id="play-button">Play</button>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+        </div>
         <div id="eq-container">
             <!-- EQ bands will be dynamically generated here -->
         </div>
         <button id="add-band-button">Add Band</button>
         <div id="filter-container">
             <div class="filter">
-                <label>High Pass Filter:</label>
+                <label>Low Cut (HPF):</label>
                 <input type="range" id="hpf-slider" min="20" max="1000" value="20" step="1">
                 <input type="number" id="hpf-input" min="20" max="1000" value="20" step="1">
             </div>
             <div class="filter">
-                <label>Low Cut Filter:</label>
+                <label>High Cut (LPF):</label>
                 <input type="range" id="lpf-slider" min="1000" max="20000" value="20000" step="1">
                 <input type="number" id="lpf-input" min="1000" max="20000" value="20000" step="1">
             </div>
         </div>
-        <canvas id="spectrum-canvas"></canvas>
+        <div id="spectrum-container">
+            <canvas id="spectrum-canvas"></canvas>
+            <div id="frequency-labels"></div>
+            <div id="gain-labels"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
